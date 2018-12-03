@@ -1,0 +1,70 @@
+Sub DiceRoll()
+Randomize
+Dim num2 As Integer
+Dim num As Integer
+Dim total As Integer
+num = Int((6 - 1 + 1) * Rnd + 1)
+Select Case num
+Case 1
+Range("B4").Value = Range("B4").Value + 1
+Case 2
+Range("B5").Value = Range("B5").Value + 1
+Case 3
+Range("B6").Value = Range("B6").Value + 1
+Case 4
+Range("B7").Value = Range("B7").Value + 1
+Case 5
+Range("B8").Value = Range("B8").Value + 1
+Case 6
+Range("B9").Value = Range("B9").Value + 1
+End Select
+num2 = Int((6 - 1 + 1) * Rnd + 1)
+Select Case num2
+Case 1
+Range("C4").Value = Range("C4").Value + 1
+Case 2
+Range("C5").Value = Range("C5").Value + 1
+Case 3
+Range("C6").Value = Range("C6").Value + 1
+Case 4
+Range("C7").Value = Range("C7").Value + 1
+Case 5
+Range("C8").Value = Range("C8").Value + 1
+Case 6
+Range("C9").Value = Range("C9").Value + 1
+End Select
+total = num + num2
+Select Case total
+Case 2
+Range("F4").Value = Range("F4").Value + 1
+Case 3
+Range("F5").Value = Range("F5").Value + 1
+Case 4
+Range("F6").Value = Range("F6").Value + 1
+Case 5
+Range("F7").Value = Range("F7").Value + 1
+Case 6
+Range("F8").Value = Range("F8").Value + 1
+Case 7
+Range("F9").Value = Range("F9").Value + 1
+Case 8
+Range("F10").Value = Range("F10").Value + 1
+Case 9
+Range("F11").Value = Range("F11").Value + 1
+Case 10
+Range("F12").Value = Range("F12").Value + 1
+Case 11
+Range("F13").Value = Range("F13").Value + 1
+Case 12
+Range("F14").Value = Range("F14").Value + 1
+End Select
+
+
+
+
+End Sub
+Sub reset()
+Range("C4", "C9").Value = 0
+Range("B4", "B9").Value = 0
+Range("F4", "F14").Value = 0
+End Sub
